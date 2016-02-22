@@ -6,7 +6,7 @@ title:            Premise
 tagline:          ''
 description:      'Zimbabwe food prices'
 url:              http://thebenedict.com
-baseurl:          /
+baseurl:          /premise-case
 
 author:
   name:           'Michael Benedict'
