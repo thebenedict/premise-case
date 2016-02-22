@@ -1,0 +1,26 @@
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Premise
+tagline:          ''
+description:      'Zimbabwe food prices'
+url:              http://thebenedict.com
+baseurl:          /
+
+author:
+  name:           'Michael Benedict'
+  url:            https://www.thebenedict.com
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/thebenedict/premise-case
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist

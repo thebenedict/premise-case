@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="layout-reverse">
+
+    {% include sidebar.html %}
+
+    <div class="content container">
+      {{ content }}
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="{{ site.baseurl }}public/js/datamaps.world.min.js" type="text/javascript"></script>
+
+    <script>
+      var cities = [
+        {
+          "name":"Harare",
+          "radius":9,
+          "fillKey":"ACTIVE",
+          "latitude": -17.8639,
+          "longitude": 31.0297
+        },
+        {
+          "name":"Bulawayo",
+          "radius":9,
+          "fillKey":"ACTIVE",
+          "latitude": -20.170,
+          "longitude": 28.580
+        },
+        {
+          "name":"Chitungwiza",
+          "radius":9,
+          "fillKey":"ACTIVE",
+          "latitude": -18.0,
+          "longitude": 31.050
+        },
+        {
+          "name":"Mutare",
+          "radius":9,
+          "fillKey":"ACTIVE",
+          "latitude": -18.9667,
+          "longitude": 32.6333
+        },
+        {
+          "name":"Gweru",
+          "radius":9,
+          "fillKey":"ACTIVE",
+          "latitude": -19.4614,
+          "longitude": 29.8022
+        }
+      ]
+
+      var getBubbleConfig = function () { 
+        return { borderWidth: 1, fillOpacity: 1, popupOnHover: true }
+      };
+
+
+      var map = new Datamap({
+        element: document.getElementById('citymap-container'),
+        geographyConfig: {
+            popupOnHover: false,
+            highlightOnHover: false
+        },
+        fills: {
+            defaultFill: '#ddd', //any hex, color name or rgb/rgba value
+            ACTIVE: '#E6242A',
+            HIGHLIGHT: '#FEEB34',
+        },
+        data: {
+          'ZWE': { fillKey: 'HIGHLIGHT' }
+        },
+        setProjection: function(element, options) {
+            var projection, path;
+            projection = d3.geo.mercator()
+                .center([29.25, -19])
+                .scale(element.offsetWidth * 4.5)
+                .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+            path = d3.geo.path()
+                .projection( projection );
+
+            return {path: path, projection: projection};
+        }
+      })
+
+      map.bubbles(cities, getBubbleConfig());
+    </script>
+
+  </body>
+</html>
