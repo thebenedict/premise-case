@@ -42,6 +42,6 @@ It is not yet clear how or when the new regulations will be enforced, or how the
 </ol>
 
 <div class="pagination">
-  <a class="pagination-item older" href="{{ site.baseurl }}1_study_design">< Study design</a>
-  <a class="pagination-item newer" href="{{ site.baseurl }}3_metrics">Metrics ></a>
+  <a class="pagination-item older" href="{{ site.baseurl }}/1_study_design">< Study design</a>
+  <a class="pagination-item newer" href="{{ site.baseurl }}/3_metrics">Metrics ></a>
 </div>

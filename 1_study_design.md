@@ -45,6 +45,6 @@ Data collection tasks assigned to enumerators should be simple and unambiguous. 
 In general we will prefer highly specified tasks. For example “Take a picture of a 250ml bag of milk at Pick n Pay Westgate, that also shows the price on the shelf” is preferable to “How much does a liter of milk cost in Harare”.
 
 <div class="pagination">
-  <a class="pagination-item older" href="{{ site.baseurl }}">< Introduction</a>
-  <a class="pagination-item newer" href="{{ site.baseurl }}2_building_the_network">Building the network ></a>
+  <a class="pagination-item older" href="{{ site.baseurl }}/">< Introduction</a>
+  <a class="pagination-item newer" href="{{ site.baseurl }}/2_building_the_network">Building the network ></a>
 </div>

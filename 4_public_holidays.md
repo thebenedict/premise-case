@@ -15,6 +15,6 @@ That said, we could adjust our tactics if the customer is on a tight schedule, o
 
 
 <div class="pagination">
-  <a class="pagination-item older" href="{{ site.baseurl }}3_metrics">< Metrics</a>
+  <a class="pagination-item older" href="{{ site.baseurl }}/3_metrics">< Metrics</a>
   <span class="pagination-item newer">Public holidays</span>
 </div>
